@@ -6,12 +6,8 @@
 	{/if}
 
 	{#if $$slots.default }
-		<slot></slot>
-	{/if}
-
-	{#if $$slots.OLSKStandardViewBody }
 		<div class="OLSKStandardViewBody">
-			<slot name="OLSKStandardViewBody"></slot>
+			<slot></slot>
 		</div>
 	{/if}
 </div>

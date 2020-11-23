@@ -2,21 +2,17 @@
 import OLSKStandardView from './main.svelte';
 </script>
 
-{#if Object.fromEntries((new window.URLSearchParams(window.location.search)).entries()).TestOLSKStandardViewToolbarHead && Object.fromEntries((new window.URLSearchParams(window.location.search)).entries()).TestOLSKStandardViewBody }
-<OLSKStandardView>
-	<div slot="OLSKStandardViewToolbarHead">TestOLSKStandardViewToolbarHead</div>
-	<div slot="OLSKStandardViewBody">TestOLSKStandardViewBody</div>
-</OLSKStandardView>
-{:else if Object.fromEntries((new window.URLSearchParams(window.location.search)).entries()).TestOLSKStandardViewToolbarHead }
-<OLSKStandardView>
-	<div slot="OLSKStandardViewToolbarHead"></div>
-</OLSKStandardView>
-{:else if Object.fromEntries((new window.URLSearchParams(window.location.search)).entries()).TestOLSKStandardViewBody }
-<OLSKStandardView>
-	<div slot="OLSKStandardViewBody"></div>
-</OLSKStandardView>
+{#if !Object.fromEntries((new window.URLSearchParams(window.location.search)).entries()).TestOLSKStandardViewToolbarHead && !Object.fromEntries((new window.URLSearchParams(window.location.search)).entries()).TestOLSKStandardViewBody }
+<OLSKStandardView />
 {:else}
 <OLSKStandardView>
+	<div slot="OLSKStandardViewToolbarHead">{#if Object.fromEntries((new window.URLSearchParams(window.location.search)).entries()).TestOLSKStandardViewToolbarHead }
+		TestOLSKStandardViewToolbarHead
+	{/if}</div>
+
+	{#if Object.fromEntries((new window.URLSearchParams(window.location.search)).entries()).TestOLSKStandardViewBody }
+		<div>TestOLSKStandardViewBody</div>
+	{/if}
 </OLSKStandardView>
 {/if}
 
@@ -31,6 +27,10 @@ import OLSKStandardView from './main.svelte';
 	width: inherit;
 	height: inherit;
 	background: red;
+}
+
+:global(.OLSKStandardViewToolbarHead) {
+	background: blue;
 }
 
 :global(.OLSKStandardViewBody) {
