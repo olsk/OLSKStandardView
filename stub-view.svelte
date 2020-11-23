@@ -13,6 +13,10 @@ import OLSKStandardView from './main.svelte';
 	{#if Object.fromEntries((new window.URLSearchParams(window.location.search)).entries()).TestOLSKStandardViewBody }
 		<div>TestOLSKStandardViewBody</div>
 	{/if}
+
+	<div slot="OLSKStandardViewTail">{#if Object.fromEntries((new window.URLSearchParams(window.location.search)).entries()).TestOLSKStandardViewTail }
+		TestOLSKStandardViewTail
+	{/if}</div>
 </OLSKStandardView>
 {/if}
 
@@ -26,14 +30,18 @@ import OLSKStandardView from './main.svelte';
 :global(.OLSKStandardView) {
 	width: inherit;
 	height: inherit;
+	background: green;
+}
+
+:global(.OLSKStandardViewHead) {
 	background: red;
+}
+
+:global(.OLSKStandardViewBody) {
+	background: yellow;
 }
 
 :global(.OLSKStandardViewHead) {
 	background: blue;
-}
-
-:global(.OLSKStandardViewBody) {
-	background: green;
 }
 </style>

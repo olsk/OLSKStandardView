@@ -10,6 +10,12 @@
 			<slot></slot>
 		</div>
 	{/if}
+
+	{#if $$slots.OLSKStandardViewTail}
+		<div class="OLSKStandardViewTail OLSKToolbar">
+			<slot name="OLSKStandardViewTail"></slot>	
+		</div>
+	{/if}
 </div>
 
 <style>

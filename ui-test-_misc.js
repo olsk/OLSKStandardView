@@ -6,6 +6,7 @@ describe('OLSKStandardView_Misc', function () {
 		return browser.OLSKVisit(kDefaultRoute, {
 			TestOLSKStandardViewHead: true,
 			TestOLSKStandardViewBody: true,
+			TestOLSKStandardViewTail: true,
 		});
 	});
 	
@@ -29,6 +30,18 @@ describe('OLSKStandardView_Misc', function () {
 		
 		it('binds OLSKStandardViewBody', function () {
 			browser.assert.text(OLSKStandardViewBody, 'TestOLSKStandardViewBody');
+		});
+
+	});
+
+	describe('OLSKStandardViewTail', function test_OLSKStandardViewTail () {
+		
+		it('classes OLSKToolbar', function () {
+			browser.assert.hasClass(OLSKStandardViewTail, 'OLSKToolbar');
+		});
+
+		it('binds OLSKStandardViewTail', function () {
+			browser.assert.text(OLSKStandardViewTail, 'TestOLSKStandardViewTail');
 		});
 
 	});

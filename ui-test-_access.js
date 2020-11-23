@@ -6,6 +6,8 @@ Object.entries({
 	OLSKStandardViewHead: '.OLSKStandardViewHead',
 	
 	OLSKStandardViewBody: '.OLSKStandardViewBody',
+	
+	OLSKStandardViewTail: '.OLSKStandardViewTail',
 }).map(function (e) {
 	return global[e.shift()]  = e.pop();
 });
@@ -26,6 +28,10 @@ describe('OLSKStandardView_Access', function () {
 
 	it('hides OLSKStandardViewBody', function () {
 		browser.assert.elements(OLSKStandardViewBody, 0);
+	});
+
+	it('hides OLSKStandardViewTail', function () {
+		browser.assert.elements(OLSKStandardViewTail, 0);
 	});
 
 	context('OLSKStandardViewHead', function () {
@@ -52,6 +58,20 @@ describe('OLSKStandardView_Access', function () {
 
 		it('shows OLSKStandardViewBody', function () {
 			browser.assert.elements(OLSKStandardViewBody, 1);
+		});
+	
+	});
+
+	context('OLSKStandardViewTail', function () {
+		
+		before(function() {
+			return browser.OLSKVisit(kDefaultRoute, {
+				TestOLSKStandardViewTail: true,
+			});
+		});
+
+		it('shows OLSKStandardViewTail', function () {
+			browser.assert.elements(OLSKStandardViewTail, 1);
 		});
 	
 	});
