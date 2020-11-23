@@ -3,7 +3,7 @@ const kDefaultRoute = require('./controller.js').OLSKControllerRoutes().shift();
 Object.entries({
 	OLSKStandardView: '.OLSKStandardView',
 	
-	OLSKStandardViewToolbarHead: '.OLSKStandardViewToolbarHead',
+	OLSKStandardViewHead: '.OLSKStandardViewHead',
 	
 	OLSKStandardViewBody: '.OLSKStandardViewBody',
 }).map(function (e) {
@@ -20,24 +20,24 @@ describe('OLSKStandardView_Access', function () {
 		browser.assert.elements(OLSKStandardView, 1);
 	});
 
-	it('hides OLSKStandardViewToolbarHead', function () {
-		browser.assert.elements(OLSKStandardViewToolbarHead, 0);
+	it('hides OLSKStandardViewHead', function () {
+		browser.assert.elements(OLSKStandardViewHead, 0);
 	});
 
 	it('hides OLSKStandardViewBody', function () {
 		browser.assert.elements(OLSKStandardViewBody, 0);
 	});
 
-	context('OLSKStandardViewToolbarHead', function () {
+	context('OLSKStandardViewHead', function () {
 		
 		before(function() {
 			return browser.OLSKVisit(kDefaultRoute, {
-				TestOLSKStandardViewToolbarHead: true,
+				TestOLSKStandardViewHead: true,
 			});
 		});
 
-		it('shows OLSKStandardViewToolbarHead', function () {
-			browser.assert.elements(OLSKStandardViewToolbarHead, 1);
+		it('shows OLSKStandardViewHead', function () {
+			browser.assert.elements(OLSKStandardViewHead, 1);
 		});
 	
 	});

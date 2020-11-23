@@ -1,7 +1,7 @@
 <div class="OLSKStandardView">
-	{#if $$slots.OLSKStandardViewToolbarHead}
-		<div class="OLSKStandardViewToolbarHead OLSKToolbar OLSKMobileViewHeader">
-			<slot name="OLSKStandardViewToolbarHead"></slot>	
+	{#if $$slots.OLSKStandardViewHead}
+		<div class="OLSKStandardViewHead OLSKToolbar OLSKMobileViewHeader">
+			<slot name="OLSKStandardViewHead"></slot>	
 		</div>
 	{/if}
 
@@ -18,7 +18,7 @@
 	flex-direction: column;
 }
 
-.OLSKStandardViewToolbarHead {
+.OLSKStandardViewHead {
 	/* OLSKStandardViewFlexbox:Child */
 	flex-shrink: 0;
 }

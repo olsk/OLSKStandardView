@@ -2,12 +2,12 @@
 import OLSKStandardView from './main.svelte';
 </script>
 
-{#if !Object.fromEntries((new window.URLSearchParams(window.location.search)).entries()).TestOLSKStandardViewToolbarHead && !Object.fromEntries((new window.URLSearchParams(window.location.search)).entries()).TestOLSKStandardViewBody }
+{#if !Object.fromEntries((new window.URLSearchParams(window.location.search)).entries()).TestOLSKStandardViewHead && !Object.fromEntries((new window.URLSearchParams(window.location.search)).entries()).TestOLSKStandardViewBody }
 <OLSKStandardView />
 {:else}
 <OLSKStandardView>
-	<div slot="OLSKStandardViewToolbarHead">{#if Object.fromEntries((new window.URLSearchParams(window.location.search)).entries()).TestOLSKStandardViewToolbarHead }
-		TestOLSKStandardViewToolbarHead
+	<div slot="OLSKStandardViewHead">{#if Object.fromEntries((new window.URLSearchParams(window.location.search)).entries()).TestOLSKStandardViewHead }
+		TestOLSKStandardViewHead
 	{/if}</div>
 
 	{#if Object.fromEntries((new window.URLSearchParams(window.location.search)).entries()).TestOLSKStandardViewBody }
@@ -29,7 +29,7 @@ import OLSKStandardView from './main.svelte';
 	background: red;
 }
 
-:global(.OLSKStandardViewToolbarHead) {
+:global(.OLSKStandardViewHead) {
 	background: blue;
 }
 

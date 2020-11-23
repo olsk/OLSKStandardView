@@ -4,23 +4,23 @@ describe('OLSKStandardView_Misc', function () {
 
 	before(function() {
 		return browser.OLSKVisit(kDefaultRoute, {
-			TestOLSKStandardViewToolbarHead: true,
+			TestOLSKStandardViewHead: true,
 			TestOLSKStandardViewBody: true,
 		});
 	});
 	
-	describe('OLSKStandardViewToolbarHead', function test_OLSKStandardViewToolbarHead () {
+	describe('OLSKStandardViewHead', function test_OLSKStandardViewHead () {
 		
 		it('classes OLSKMobileViewHeader', function () {
-			browser.assert.hasClass(OLSKStandardViewToolbarHead, 'OLSKMobileViewHeader');
+			browser.assert.hasClass(OLSKStandardViewHead, 'OLSKMobileViewHeader');
 		});
 
 		it('classes OLSKToolbar', function () {
-			browser.assert.hasClass(OLSKStandardViewToolbarHead, 'OLSKToolbar');
+			browser.assert.hasClass(OLSKStandardViewHead, 'OLSKToolbar');
 		});
 
 		it('binds OLSKStandardViewBody', function () {
-			browser.assert.text(OLSKStandardViewToolbarHead, 'TestOLSKStandardViewToolbarHead');
+			browser.assert.text(OLSKStandardViewHead, 'TestOLSKStandardViewHead');
 		});
 
 	});
