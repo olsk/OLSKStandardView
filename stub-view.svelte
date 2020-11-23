@@ -2,7 +2,7 @@
 import OLSKStandardView from './main.svelte';
 </script>
 
-{#if !Object.fromEntries((new window.URLSearchParams(window.location.search)).entries()).TestOLSKStandardViewHead && !Object.fromEntries((new window.URLSearchParams(window.location.search)).entries()).TestOLSKStandardViewBody }
+{#if !Object.keys(Object.fromEntries((new window.URLSearchParams(window.location.search)).entries())).length }
 <OLSKStandardView />
 {:else}
 <OLSKStandardView>

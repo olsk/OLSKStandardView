@@ -19,7 +19,7 @@ describe('OLSKStandardView_Misc', function () {
 			browser.assert.hasClass(OLSKStandardViewHead, 'OLSKToolbar');
 		});
 
-		it('binds OLSKStandardViewBody', function () {
+		it('binds OLSKStandardViewHead', function () {
 			browser.assert.text(OLSKStandardViewHead, 'TestOLSKStandardViewHead');
 		});
 
