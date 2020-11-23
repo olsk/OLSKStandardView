@@ -30,8 +30,6 @@
 }
 
 .OLSKStandardViewBody {
-	overflow: auto;
-	
 	/* OLSKStandardViewFlexbox:Child */
 	flex-grow: 1;
 
