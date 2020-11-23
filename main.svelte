@@ -34,5 +34,12 @@
 	
 	/* OLSKStandardViewFlexbox:Child */
 	flex-grow: 1;
+
+	display: flex;
+}
+
+.OLSKStandardViewBody > :global(*) {
+	width: 100%;
+	/*height: 100%;*/
 }
 </style>
