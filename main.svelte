@@ -1,6 +1,6 @@
 <div class="OLSKStandardView">
 	{#if $$slots.OLSKStandardViewHead}
-		<div class="OLSKStandardViewHead OLSKToolbar OLSKMobileViewHeader">
+		<div class="OLSKStandardViewHead OLSKToolbar OLSKToolbarBorderBottom OLSKMobileViewHeader">
 			<slot name="OLSKStandardViewHead"></slot>	
 		</div>
 	{/if}
