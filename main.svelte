@@ -12,7 +12,7 @@
 	{/if}
 
 	{#if $$slots.OLSKStandardViewTail}
-		<div class="OLSKStandardViewTail OLSKToolbar">
+		<div class="OLSKStandardViewTail">
 			<slot name="OLSKStandardViewTail"></slot>	
 		</div>
 	{/if}

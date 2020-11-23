@@ -36,10 +36,6 @@ describe('OLSKStandardView_Misc', function () {
 
 	describe('OLSKStandardViewTail', function test_OLSKStandardViewTail () {
 		
-		it('classes OLSKToolbar', function () {
-			browser.assert.hasClass(OLSKStandardViewTail, 'OLSKToolbar');
-		});
-
 		it('binds OLSKStandardViewTail', function () {
 			browser.assert.text(OLSKStandardViewTail, 'TestOLSKStandardViewTail');
 		});
