@@ -1,12 +1,12 @@
-<div class="OLSKStandardView">
+<div class="OLSKStandardView OLSKDecorFixed">
 	{#if $$slots.OLSKStandardViewHead}
-		<div class="OLSKStandardViewHead OLSKMobileViewHeader">
+		<div class="OLSKStandardViewHead OLSKDecorFixedHeader">
 			<slot name="OLSKStandardViewHead"></slot>	
 		</div>
 	{/if}
 
 	{#if $$slots.default }
-		<div class="OLSKStandardViewBody">
+		<div class="OLSKStandardViewBody OLSKDecorFixedSecondary">
 			<slot></slot>
 		</div>
 	{/if}
