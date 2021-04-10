@@ -29,6 +29,10 @@
 	flex-shrink: 0;
 }
 
+.OLSKStandardViewHead :global(*) {
+	color: var(--OLSKCommonForeground);
+}
+
 .OLSKStandardViewBody {
 	/* OLSKStandardViewFlexbox:Child */
 	flex-grow: 1;
