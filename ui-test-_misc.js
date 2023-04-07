@@ -13,7 +13,7 @@ describe('OLSKStandardView_Misc', function () {
 	describe('OLSKStandardView', function test_OLSKStandardView () {
 		
 		it('classes OLSKDecorFixed', function () {
-			browser.assert.hasClass(OLSKStandardView, 'OLSKDecorFixed');
+			return browser.assert.hasClass(OLSKStandardView, 'OLSKDecorFixed');
 		});
 
 	});
@@ -21,11 +21,11 @@ describe('OLSKStandardView_Misc', function () {
 	describe('OLSKStandardViewHead', function test_OLSKStandardViewHead () {
 		
 		it('classes OLSKDecorFixedHeader', function () {
-			browser.assert.hasClass(OLSKStandardViewHead, 'OLSKDecorFixedHeader');
+			return browser.assert.hasClass(OLSKStandardViewHead, 'OLSKDecorFixedHeader');
 		});
 
 		it('binds OLSKStandardViewHead', function () {
-			browser.assert.text(OLSKStandardViewHead, 'TestOLSKStandardViewHead');
+			return browser.assert.text(OLSKStandardViewHead, 'TestOLSKStandardViewHead');
 		});
 
 	});
@@ -33,11 +33,11 @@ describe('OLSKStandardView_Misc', function () {
 	describe('OLSKStandardViewBody', function test_OLSKStandardViewBody () {
 
 		it('classes OLSKDecorFixedSecondary', function () {
-			browser.assert.hasClass(OLSKStandardViewBody, 'OLSKDecorFixedSecondary');
+			return browser.assert.hasClass(OLSKStandardViewBody, 'OLSKDecorFixedSecondary');
 		});
 		
 		it('binds OLSKStandardViewBody', function () {
-			browser.assert.text(OLSKStandardViewBody, 'TestOLSKStandardViewBody');
+			return browser.assert.text(OLSKStandardViewBody, 'TestOLSKStandardViewBody');
 		});
 
 	});
@@ -45,7 +45,7 @@ describe('OLSKStandardView_Misc', function () {
 	describe('OLSKStandardViewTail', function test_OLSKStandardViewTail () {
 		
 		it('binds OLSKStandardViewTail', function () {
-			browser.assert.text(OLSKStandardViewTail, 'TestOLSKStandardViewTail');
+			return browser.assert.text(OLSKStandardViewTail, 'TestOLSKStandardViewTail');
 		});
 
 	});

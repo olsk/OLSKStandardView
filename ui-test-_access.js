@@ -19,19 +19,19 @@ describe('OLSKStandardView_Access', function () {
 	});
 
 	it('shows OLSKStandardView', function () {
-		browser.assert.elements(OLSKStandardView, 1);
+		return browser.assert.elements(OLSKStandardView, 1);
 	});
 
 	it('hides OLSKStandardViewHead', function () {
-		browser.assert.elements(OLSKStandardViewHead, 0);
+		return browser.assert.elements(OLSKStandardViewHead, 0);
 	});
 
 	it('hides OLSKStandardViewBody', function () {
-		browser.assert.elements(OLSKStandardViewBody, 0);
+		return browser.assert.elements(OLSKStandardViewBody, 0);
 	});
 
 	it('hides OLSKStandardViewTail', function () {
-		browser.assert.elements(OLSKStandardViewTail, 0);
+		return browser.assert.elements(OLSKStandardViewTail, 0);
 	});
 
 	context('OLSKStandardViewHead', function () {
@@ -43,7 +43,7 @@ describe('OLSKStandardView_Access', function () {
 		});
 
 		it('shows OLSKStandardViewHead', function () {
-			browser.assert.elements(OLSKStandardViewHead, 1);
+			return browser.assert.elements(OLSKStandardViewHead, 1);
 		});
 	
 	});
@@ -57,7 +57,7 @@ describe('OLSKStandardView_Access', function () {
 		});
 
 		it('shows OLSKStandardViewBody', function () {
-			browser.assert.elements(OLSKStandardViewBody, 1);
+			return browser.assert.elements(OLSKStandardViewBody, 1);
 		});
 	
 	});
@@ -71,7 +71,7 @@ describe('OLSKStandardView_Access', function () {
 		});
 
 		it('shows OLSKStandardViewTail', function () {
-			browser.assert.elements(OLSKStandardViewTail, 1);
+			return browser.assert.elements(OLSKStandardViewTail, 1);
 		});
 	
 	});
